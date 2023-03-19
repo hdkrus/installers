@@ -36,6 +36,7 @@ function install-all() {
   install-zsh-autosuggestions
   install-sdkman
   install-sdkman-java 11
+  install-sdkman-maven
   install-colorls
 }
 

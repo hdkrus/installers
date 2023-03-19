@@ -1,3 +1,15 @@
+## [v1.1.0](https://github.com/hdkrus/installers/tree/v1.1.0)
+
+### What's New
+
+#### Add:
+
+- maven
+
+#### Changes:
+
+#### Fixes:
+
 ## [v1.0.0](https://github.com/hdkrus/installers/tree/v1.0.0)
 
 ### What's New

@@ -31,9 +31,12 @@ function install-sdkman() {
 #   Installation output
 #######################################
 function install-sdkman-java() {
+  local jdk_version
   jdk_version=$1
   if [ -n "$jdk_version" ]; then
+    local zulu_version
     zulu_version=$(sdk list java | \grep -o "$jdk_version\.[0-9]*\.[0-9]*-zulu" | head -n 1)
+
     echo "Installing JDK $zulu_version..."
     if [ -z "$(sdk list java | \grep "installed" | \grep -o "$zulu_version" | head -n 1)" ]; then
       sdk install java "$zulu_version"
@@ -42,5 +45,26 @@ function install-sdkman-java() {
     fi
   else
     echo "JDK version is required, example: 'install-sdkman-java 8'"
+  fi
+}
+
+#######################################
+# Install maven with sdkman
+# Globals:
+#   None
+# Arguments:
+#   None
+# Output:
+#   Installation output
+#######################################
+function install-sdkman-maven() {
+  local last_maven_version
+  last_maven_version=$(sdk list maven | \grep -o "[0-9]*\.[0-9]*\.[0-9]* " | sort -r | head -n 1 | sed 's/ *$//g')
+
+  echo "Installing maven $last_maven_version..."
+  if [ -z "$(sdk list maven | \grep -o "\* $last_maven_version " | head -n 1)" ]; then
+    sdk install maven "$last_maven_version"
+  else
+    echo "- maven $last_maven_version is already installed"
   fi
 }

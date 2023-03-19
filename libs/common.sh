@@ -61,6 +61,7 @@ function is-wsl() {
 #   0 if command exists, otherwise 1
 #######################################
 function is-installed() {
-  local cmd=$1
+  local cmd
+  cmd=$1
   (type "$cmd" &> /dev/null && echo 0) || echo 1
 }

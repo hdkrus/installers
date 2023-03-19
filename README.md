@@ -12,6 +12,7 @@ Scripts to install common used tools, themes and plugins for Unix based terminal
 - zsh-autosuggestions plugin
 - sdkman
 - Jdk 11 zulu distribution
+- maven
 - ruby (required by colorls)
 - colorls
 
@@ -36,5 +37,6 @@ Otherwise, you can install manually just the features you need:
 - zsh-autosuggestions plugin (requires *zsh*): `install-zsh-autosuggestions`
 - sdkman: `install-sdkman`
 - Jdk <version>, zulu distro (requires *sdkman*): `install-sdkman-java <version>`. Example to install latest 11 version run `install-sdkman-java 11`
+- maven (requires *sdkman*): `install-sdkman-maven`
 - ruby (requires *brew*): `install-ruby`
 - colorls (requires *ruby*): `install-colorls`
