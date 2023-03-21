@@ -1,4 +1,7 @@
 # Bash Installers
+
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](./LICENSE)
+
 Scripts to install common used tools, themes and plugins for Unix based terminals.
 
 ### Features included when you run `install-all`
